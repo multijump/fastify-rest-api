@@ -38,7 +38,7 @@ npm run dev
 https://httpie.io/docs#installation
 
 ```bash
-http post http://localhost:3000/users name=Nome password=Senha role=Função
+http post http://localhost:3000/users name=Bob password=Password role=Admin
 ```
 ```bash
 http get http://localhost:3000/users
@@ -47,7 +47,7 @@ http get http://localhost:3000/users
 **Auth/JWT**
 
 ```bash
-http post http://localhost:3000/auth name=Nome password=Senha
+http post http://localhost:3000/auth name=Bob password=Password
 ```
 
 **Guard**
@@ -66,7 +66,7 @@ http -f http://localhost:3000/upload @~/avatar.jpg
 
 Configure nodemailer in src/plugins/nodemailer.js
 ```bash
-http post http://localhost:3000/email to=email@email.com subject=Assunto text=Mensagem
+http post http://localhost:3000/email to=email@email.com subject=Subject text=Message
 ```
 
 **Socket.io**
