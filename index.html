@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="http://0.0.0.0:3000/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <p>Wait for socket.io route request</p>
+    <p id="log"></p>
+    <script>
+      const socket = io('http://0.0.0.0:3000', { reconnection: true })
+
+      socket.on('chat:0001', (data) => {
+        document.getElementById('log').innerHTML = data
+      })
+    </script>
+  </body>
+</html>
